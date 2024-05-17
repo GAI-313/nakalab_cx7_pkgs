@@ -20,6 +20,12 @@ rosdep install -r -y -i --from-paths .
 colcon build --packages-up-to cx7_bringup
 ```
 
+## Quick Start
+すぐに使用したい場合は以下のコマンドを実行してください。
+```bash
+ros2 launch cx7_bringup cranex7_bringup.launch.py
+```
+
 ## Packages
 
 - **[cx7_bringup](cx7_bringup)**<br>
