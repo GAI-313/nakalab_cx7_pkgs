@@ -30,3 +30,5 @@ ros2 launch cx7_bringup cranex7_bringup.launch.py
 
 - **[cx7_bringup](cx7_bringup)**<br>
     CRANEX7 の起動パッケージ。現在はシミュレーションのみサポートしています。
+- **[cx7_config](cx7_config)**<br>
+    CRANE X7 のコンフィグファイルをまとめるパッケージ。姿勢設定などをまとめています。
