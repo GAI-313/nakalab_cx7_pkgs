@@ -40,6 +40,10 @@ def generate_launch_description():
     )
 
     description_loader = RobotDescriptionLoader()
+    description_loader.robot_description_path = os.path.join(
+        get_package_share_directory('cx7_config'),
+        'urdf','crane_x7.urdf.xacro'
+    )
     description_loader.use_gazebo = 'true'
     description_loader.use_d435 = LaunchConfiguration('use_d435') # use RealSense d4535
     description_loader.gz_control_config_package = 'crane_x7_control'

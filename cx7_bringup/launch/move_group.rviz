@@ -75,6 +75,15 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           crane_x7_gripper_base_link:
             Alpha: 1
             Show Axes: false
@@ -228,6 +237,15 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
+          camera_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           crane_x7_gripper_base_link:
             Alpha: 1
             Show Axes: false
@@ -336,6 +354,103 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 0.1
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        camera_bottom_screw_frame:
+          Value: true
+        camera_link:
+          Value: true
+        crane_x7_gripper_base_link:
+          Value: true
+        crane_x7_gripper_finger_a_link:
+          Value: true
+        crane_x7_gripper_finger_b_link:
+          Value: true
+        crane_x7_lower_arm_fixed_part_joint_cover_l_link:
+          Value: true
+        crane_x7_lower_arm_fixed_part_joint_cover_r_link:
+          Value: true
+        crane_x7_lower_arm_fixed_part_link:
+          Value: true
+        crane_x7_lower_arm_revolute_part_link:
+          Value: true
+        crane_x7_lower_arm_revolute_part_logo_symbol_l_link:
+          Value: true
+        crane_x7_lower_arm_revolute_part_logo_symbol_r_link:
+          Value: true
+        crane_x7_lower_arm_revolute_part_logo_text_l_link:
+          Value: true
+        crane_x7_lower_arm_revolute_part_logo_text_r_link:
+          Value: true
+        crane_x7_mounting_plate_link:
+          Value: true
+        crane_x7_shoulder_fixed_part_link:
+          Value: true
+        crane_x7_shoulder_revolute_part_link:
+          Value: true
+        crane_x7_upper_arm_fixed_part_joint_cover_l_link:
+          Value: true
+        crane_x7_upper_arm_fixed_part_joint_cover_r_link:
+          Value: true
+        crane_x7_upper_arm_fixed_part_link:
+          Value: true
+        crane_x7_upper_arm_revolute_part_link:
+          Value: true
+        crane_x7_wrist_link:
+          Value: true
+        dummy_mimic_fix:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            crane_x7_mounting_plate_link:
+              crane_x7_shoulder_fixed_part_link:
+                crane_x7_shoulder_revolute_part_link:
+                  crane_x7_upper_arm_fixed_part_link:
+                    crane_x7_upper_arm_fixed_part_joint_cover_l_link:
+                      {}
+                    crane_x7_upper_arm_fixed_part_joint_cover_r_link:
+                      {}
+                    crane_x7_upper_arm_revolute_part_link:
+                      crane_x7_lower_arm_fixed_part_link:
+                        crane_x7_lower_arm_fixed_part_joint_cover_l_link:
+                          {}
+                        crane_x7_lower_arm_fixed_part_joint_cover_r_link:
+                          {}
+                        crane_x7_lower_arm_revolute_part_link:
+                          crane_x7_lower_arm_revolute_part_logo_symbol_l_link:
+                            {}
+                          crane_x7_lower_arm_revolute_part_logo_symbol_r_link:
+                            {}
+                          crane_x7_lower_arm_revolute_part_logo_text_l_link:
+                            {}
+                          crane_x7_lower_arm_revolute_part_logo_text_r_link:
+                            {}
+                          crane_x7_wrist_link:
+                            crane_x7_gripper_base_link:
+                              camera_bottom_screw_frame:
+                                camera_link:
+                                  {}
+                              crane_x7_gripper_finger_a_link:
+                                {}
+                              crane_x7_gripper_finger_b_link:
+                                {}
+          dummy_mimic_fix:
+            {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

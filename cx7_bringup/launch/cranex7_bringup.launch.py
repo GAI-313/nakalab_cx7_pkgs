@@ -30,7 +30,6 @@ def generate_launch_description():
         # exec simulation
         sim_launch = IncludeLaunchDescription(
                         PythonLaunchDescriptionSource(
-                            #[crane_x7_gazebo_prefix, '/launch', '/crane_x7_with_table.launch.py']
                             [ThisLaunchFileDir(), '/crane_x7_d435_with_table.launch.py']
                         ),
                         condition=IfCondition(LaunchConfiguration('is_sim'))
