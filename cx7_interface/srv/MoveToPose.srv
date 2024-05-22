@@ -1,0 +1,8 @@
+# Set arm pose via MoveGroupInterface
+
+string planning_group arm
+string goal_state home
+float32 max_vel 0.5
+float32 max_accel 0.3
+---
+bool success
