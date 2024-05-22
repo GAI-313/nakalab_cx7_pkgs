@@ -16,6 +16,7 @@
   <depend>crane_x7_description</depend>
 
   <depend>cx7_config</depend>
+  <depend>cx7_controller</depend>
 
   <export>
     <build_type>ament_python</build_type>
