@@ -19,6 +19,7 @@ def generate_launch_description():
     # prefix
     crane_x7_gazebo_prefix = get_package_share_directory('crane_x7_gazebo')
     crane_x7_examples_prefix = get_package_share_directory('crane_x7_examples')
+    cx7_controller_prefix = get_package_share_directory('cx7_controller')
 
     # launch args
     declare_simulation = DeclareLaunchArgument('is_sim', default_value='true',
@@ -43,6 +44,13 @@ def generate_launch_description():
                             condition=UnlessCondition(LaunchConfiguration('is_sim'))
                         )
 
+        # launch controller
+        controller_launch = IncludeLaunchDescription(
+                            PythonLaunchDescriptionSource(
+                                [cx7_controller_prefix, '/launch', '/cx7_controller.launch.py']
+                            ),
+                        )
+
         ## configs
         ld.add_action(declare_simulation)
         ld.add_action(declare_use_d435)
@@ -50,6 +58,7 @@ def generate_launch_description():
         ## action launcher
         ld.add_action(sim_launch)
         ld.add_action(quick_launch)
+        ld.add_action(controller_launch)
 
         return ld
         
