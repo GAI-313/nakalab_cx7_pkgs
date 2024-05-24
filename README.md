@@ -26,9 +26,31 @@ colcon build --packages-up-to cx7_bringup
 ros2 launch cx7_bringup cranex7_bringup.launch.py
 ```
 
-## Packages
+## move_to_go service
+　`move_to_go` サービスは事前に設定したロボットアームの姿勢へ遷移させるサービスです。以下のコマンドを実行するとロボットアームは`home`姿勢へ遷移します。
+```
+ros2 service call /move_to_pose cx7_interface/srv/MoveToPose "{goal_state: home}"
+```
+　他の姿勢へ遷移させたい場合はコマンドの `home` を別の姿勢名に変えてください。例えば、`push_hand` 姿勢にしたい場合は以下のコマンドを実行します。
+```
+ros2 service call /move_to_pose cx7_interface/srv/MoveToPose "{goal_state: push_hand}"
+```
+現在本パッケージで使用できる姿勢は以下のとおりです。
 
+- **Group arm**
+    - home
+    - gaze
+    - push_hand
+    - picking
+
+新たに姿勢を追加したい場合は[cx7_config](cx7_config)を参照してください。
+
+## Packages
 - **[cx7_bringup](cx7_bringup)**<br>
     CRANEX7 の起動パッケージ。現在はシミュレーションのみサポートしています。
 - **[cx7_config](cx7_config)**<br>
     CRANE X7 のコンフィグファイルをまとめるパッケージ。姿勢設定などをまとめています。
+- **[cx7_controller](cx7_controller)**<br>
+    CRANE X7 を動作させるために必要なノードをまとめるパッケージ
+- **[cx7_interface](cx7_interface)**<br>
+    `cx7_...` パッケージで使用するインターフェースファイルをまとめるパッケージ
